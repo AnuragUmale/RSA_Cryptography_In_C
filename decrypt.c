@@ -20,7 +20,7 @@ void verbose(mpz_t n, mpz_t d)
   gmp_fprintf(stderr, "d - private exponent (%zu bits) %Zd\n", mpz_sizeinbase(d, 2), d);
 }
 
-void help()
+void help(void)
 {
   fprintf(stderr, "Usage: ./decrypt [options]\n");
   fprintf(stderr, "  ./decrypt decrypts an input file using the specified private key file,\n");

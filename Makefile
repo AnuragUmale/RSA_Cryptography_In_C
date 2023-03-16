@@ -4,13 +4,13 @@ LFLAGS = $(shell pkg-config --libs gmp)
 
 all: keygen encrypt decrypt
 
-keygen: keygen.o ss.o randstate.o numtheory.o
+keygen: keygen.o rsa.o randstate.o numtheory.o
 	$(CC) -o $@ $^ $(LFLAGS)
 
-encrypt: encrypt.o ss.o randstate.o numtheory.o
+encrypt: encrypt.o rsa.o randstate.o numtheory.o
 	$(CC) -o $@ $^ $(LFLAGS)
 
-decrypt: decrypt.o ss.o randstate.o numtheory.o
+decrypt: decrypt.o rsa.o randstate.o numtheory.o
 	$(CC) -o $@ $^ $(LFLAGS)
 
 %.o: %.c

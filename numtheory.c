@@ -2,7 +2,7 @@
 
 #include "randstate.h"
 
-void gcd(mpz_t g, mpz_t a, mpz_t b) {
+void gcd(mpz_t g, const mpz_t a, const mpz_t b){
     if (mpz_cmp_ui(b, 0) == 0 || mpz_cmp_ui(a, 0) == 0 || mpz_cmp_ui(a, 1) == 0 || mpz_cmp_ui(b, 1) == 0) { 
         mpz_set_ui(g, 0);
         return;
@@ -22,7 +22,7 @@ void gcd(mpz_t g, mpz_t a, mpz_t b) {
     return;
 }
 
-void mod_inverse(mpz_t o, mpz_t a, mpz_t n) { 
+void mod_inverse(mpz_t o, const mpz_t a, const mpz_t n) { 
     mpz_t r1, r2, t1, t2, temp1, temp2, q, q_mul_r, q_mul_t; 
     mpz_inits(r1, r2, t1, t2, temp1, temp2, q, q_mul_r, q_mul_t, NULL); 
     mpz_set(r1, n);
@@ -57,7 +57,7 @@ void mod_inverse(mpz_t o, mpz_t a, mpz_t n) {
 }
 
 
-void pow_mod(mpz_t o, mpz_t a, mpz_t d, mpz_t n) {
+void pow_mod(mpz_t o, const mpz_t a, const mpz_t d, const mpz_t n) {
     mpz_t v, p, copy_of_d, copy_of_d_1, temp; 
     mpz_inits(v, p, copy_of_d, copy_of_d_1, temp, NULL); 
     mpz_set_ui(v, 1); 
@@ -78,7 +78,7 @@ void pow_mod(mpz_t o, mpz_t a, mpz_t d, mpz_t n) {
 }
 
 
-bool is_prime(mpz_t n, uint64_t iters) {
+bool is_prime(const mpz_t n, uint64_t iters) {
     mpz_t a, y, j, r, pow_mod_exp, n1, one; 
     mpz_inits(a, y, j, r, pow_mod_exp, n1, one, NULL); 
     if (mpz_cmp_ui(n, 2) == 0 || mpz_cmp_ui(n, 3) == 0) { 

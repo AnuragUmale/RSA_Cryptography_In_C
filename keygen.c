@@ -21,8 +21,7 @@ void verbose(char *username, mpz_t s, mpz_t p, mpz_t q, mpz_t n, mpz_t e, mpz_t 
   gmp_fprintf(stderr, "d - private exponent (%zu bits) %Zd\n", mpz_sizeinbase(d, 2), d);
 }
 
-// This function prints the help message to stderr
-void help()
+void help(void)
 {
   fprintf(stderr, "Usage: ./keygen [options]\n");
   fprintf(stderr, "  ./keygen generates a public / private key pair, placing the keys into the public and private\n");

@@ -20,7 +20,7 @@ void verbose(char *username, mpz_t s, mpz_t n, mpz_t e){
   gmp_fprintf(stderr, "e - public exponent (%zu bits) %Zd\n", mpz_sizeinbase(e, 2), e);
 }
 
-void help(){
+void help(void){
   fprintf(stderr, "Usage: ./encrypt [options]\n");
   fprintf(stderr, "  ./encrypt encrypts an input file using the specified public key file,\n");
   fprintf(stderr, "  writing the result to the specified output file.\n");
