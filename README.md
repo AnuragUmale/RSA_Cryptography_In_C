@@ -43,13 +43,13 @@ This command will just compile other C files and make the executable and object 
 $ make
 ```
 
-1. This command will just compile and make the executable and object file for **keygen.c**,**encrypt.c** and **decrypt.c**..
+This command will just compile and make the executable and object file for **keygen.c**,**encrypt.c** and **decrypt.c**..
 
 ```
 $ ./keygen -flag
 ```
 
-2. flags = b,i,n,d,s,v and h you can pass one or many flags together.
+flags = b,i,n,d,s,v and h you can pass one or many flags together.
 
 ### Flags
 
@@ -78,7 +78,7 @@ $ ./keygen -flag
 $./encrypt -flags
 ```
 
-3. flags = i,o,n,v and h.
+flags = i,o,n,v and h.
 
 ### Flags
 
