@@ -123,4 +123,4 @@ $./decrypt -flag
 
 # Note
 
-If you are a student and if are taking a look at my repository for your assignment, any piece of code that your copy from this repository is completely your responsibility. I should not be held repsonsible for that. 
+If you are a student and if are taking a look at my repository for your assignment, any piece of code that your copy from this repository is completely your responsibility. I should not be held repsonsible for any academic misconduct. 
